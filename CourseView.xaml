@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contacts.CourseView">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Home"
+                     Clicked="Home_Clicked"/>
+        <ToolbarItem Text="Add"
+                     Clicked="AddCourse_Clicked"/>
+        <ToolbarItem Text="Edit"
+                     Clicked="EditCourse_Clicked"/>
+        <ToolbarItem Text="Delete"
+                     Clicked="DeleteCourse_Clicked"/>
+        <ToolbarItem Text="Details"
+                     Clicked="CourseDetails_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,0">
+            <Label Text="Courses" FontSize="Title" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="Please select a course:"  TextColor="Black"/>
+            <ListView x:Name="courseListView" ItemSelected="courseListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding CourseName}"
+                                  Detail="{Binding statPicker}"
+                                   
+                                  TextColor="DarkBlue"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+
+</ContentPage>

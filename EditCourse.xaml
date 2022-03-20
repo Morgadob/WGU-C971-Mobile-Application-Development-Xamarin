@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contacts.EditCourse">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,0">
+            <Label Text="Modify Course info:" FontSize="Title" FontAttributes="Bold" TextColor="Black"/>
+
+            <Entry Placeholder="Course Name" x:Name="CourseEditName"/>
+            <Picker Title="Course Status" x:Name="courseStatEditPicker">
+                <Picker.Items>
+                    <x:String>In-Progress</x:String>
+                    <x:String>Completed</x:String>
+                    <x:String>Dropped</x:String>
+                    <x:String>To Take</x:String>
+                </Picker.Items>
+            </Picker>
+            <DatePicker x:Name="courseEditStartDate" DateSelected="courseEditStartDate_DateSelected"/>
+            <DatePicker x:Name="courseEditEndDate" DateSelected="courseEditEndDate_DateSelected"/>
+
+            <Entry Placeholder="Course Instructor" x:Name="CourseEditInst"/>
+            <Entry Placeholder="Instructor Phone Number" x:Name="courseEditPhone"/>
+            <Entry Placeholder="Instructor Email" x:Name="courseEditEmail"/>
+            <StackLayout>
+                <Label Text="Enable Notifications" HorizontalOptions="StartAndExpand" Margin="20,0,0,0"/>
+                <Switch 
+                            x:Name="editSwitchNot"
+                            HorizontalOptions="CenterAndExpand" 
+                            Scale="1.2"/>
+            </StackLayout>
+            <Entry Placeholder="Additional Notes" x:Name="editNotes"/>
+            <Button Text="Save"
+                x:Name="saveButton" Clicked="saveButton_Clicked" BackgroundColor="lightblue" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

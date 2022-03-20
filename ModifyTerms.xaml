@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contacts.ModifyTerms">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,0">
+            <Label Text="Edit Term:" FontSize="Title" FontAttributes="Bold" TextColor="Black"/>
+            <Entry x:Name="editTermName"/>
+            <DatePicker x:Name="startDate" DateSelected="eTermStartPicker_DateSelected"/>
+            <DatePicker x:Name="endDate" DateSelected="ETermEndPicker_DateSelected"/>
+            <Button Text="Save"
+                x:Name="SaveButton"
+                    Clicked="SaveButton_Clicked"
+                    BackgroundColor="lightblue" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contacts.AssessmentDetails">
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,0">
+            <Label Text="Assessment Name" FontAttributes="Bold" x:Name="assessName" TextColor="Black"/>
+            
+            <Label Text="Status:" FontAttributes="Bold" x:Name="assessStatus" />
+            <BoxView HeightRequest="1" Color="LightGray"/>
+            
+            <Label Text="Start Date:" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="startdate" x:Name="startDateLabel"/>
+
+            
+            <Label Text="Due Date:" FontAttributes="Bold" TextColor="Black"/>
+            <Label Text="endDate" x:Name="endDateLabel"/>
+
+            <Label Text="Notifications Enabled:" FontAttributes="Bold"  TextColor="Black"/>
+            <Label Text="Notifications Enabled:" x:Name="notifEnabled"/>
+           
+            
+            
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

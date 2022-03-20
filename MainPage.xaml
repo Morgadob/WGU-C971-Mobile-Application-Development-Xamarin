@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contacts.MainPage">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Clicked="ADDTERM_Clicked"/>
+        <ToolbarItem Text="Edit"
+                     Clicked="EDITTERM_Clicked"/>
+        <ToolbarItem Text="Delete"
+                     Clicked="DELETETERM_Clicked"/>
+        <ToolbarItem Text="Details"
+                     Clicked="DETAILS_Clicked"/>
+        
+        <ToolbarItem Text="Courses"
+                     Clicked="VIEWCOURSES_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Margin="20,20,20,0">
+            <Label Text="Welcome to the WGU app!" HorizontalTextAlignment="Center" FontSize="Title" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black"/>
+            <Image Source="wgu.jpeg" Margin="10,10,10,10" />
+            <Label Text="Please select a term:"  TextColor="Black"/>
+            <ListView x:Name="termListView" ItemSelected="termsListView_ItemSelected">
+                <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding TermName}"
+                                  Detail="{Binding Start, StringFormat='{0:MM/dd/yyyy}'}"
+                                  TextColor="Blue"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+
+</ContentPage>
